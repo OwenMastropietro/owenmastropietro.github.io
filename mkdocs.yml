@@ -1,0 +1,98 @@
+site_name: Owen Mastro
+# site_url: https://sitename.example
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    # - navigation.expand
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: switch to system preference
+  font:
+    text: Roboto
+    code: Consolas
+  favicon: assets/favicon.ico
+  icon:
+    logo: fontawesome/solid/code
+  logo: assets/portrait-med.png
+
+nav:
+  - Home: index.md
+  - Resume: pages/home/resume.md
+
+  - Code:
+      - Projects:
+          - NeuroLoop: pages/code/projects/neuroloop.md
+          - FathomView: pages/code/projects/fathomview.md
+          - FathomMap: pages/code/projects/fathommap.md
+          - LoboShell: pages/code/projects/lobo-shell.md
+          - ParallelFFT: pages/code/projects/parallel-fft.md
+          - SmallTalk: pages/code/projects/smalltalk.md
+  - Non-Code:
+      - Vehicles:
+          - Xterra:
+              - Build List: pages/home/vehicles/xterra/build-list.md
+              - Gallery: pages/home/vehicles/xterra/gallery.md
+      - Fitness: pages/home/fitness.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
+  - pymdownx.blocks.caption
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - stylesheets/custom.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+extra:
+  social:
+    - icon: material/linkedin
+      link: https://www.linkedin.com/in/owenmastropietro/
+    - icon: material/github
+      link: https://github.com/OwenMastropietro
+
+copyright: Copyright &copy; 2025 Owen Mastropietro
