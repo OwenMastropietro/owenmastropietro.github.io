@@ -39,10 +39,10 @@
 
 Click a project name!
 
-- **[NeuroLoop](./pages/code/projects/neuroloop.md)** - Controlling Neural Synchronization via Closed-Loop Deep Brain Stimulation.
-- **[FathomView](./pages/code/projects/fathomview.md)** - Underwater Image Enhancement using Deep Learning.
-- **[FathomMap](./pages/code/projects/fathommap.md)** - Underwater Image Content-Based Image Retrieval.
-- **[ParallelFFT](./pages/code/projects/parallel-fft.md)** - Parallel Fast Fourier Transform using OpenMP.
-- **[SmallTalk](./pages/code/projects/smalltalk.md)** - FPGA-Accelerated Speech Recognition using FFT-based Feature Extraction.
-- **[LoboShell](./pages/code/projects/lobo-shell.md)** - Unix Shell in C.
+- **[NeuroLoop](./projects/neuroloop.md)** - Controlling Neural Synchronization via Closed-Loop Deep Brain Stimulation.
+- **[FathomView](./projects/fathomview.md)** - Underwater Image Enhancement using Deep Learning.
+- **[FathomMap](./projects/fathommap.md)** - Underwater Image Content-Based Image Retrieval.
+- **[ParallelFFT](./projects/parallel-fft.md)** - Parallel Fast Fourier Transform using OpenMP.
+- **[SmallTalk](./projects/smalltalk.md)** - FPGA-Accelerated Speech Recognition using FFT-based Feature Extraction.
+- **[LoboShell](./projects/lobo-shell.md)** - Unix Shell in C.
 <!-- - **[Spotlessfy](todo)** - Three-Tier Web-App for Streaming Audio using MySQL, KOA, and React. -->

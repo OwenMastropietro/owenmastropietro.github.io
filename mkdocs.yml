@@ -39,12 +39,12 @@ nav:
 
   - Code:
       - Projects:
-          - NeuroLoop: pages/code/projects/neuroloop.md
-          - FathomView: pages/code/projects/fathomview.md
-          - FathomMap: pages/code/projects/fathommap.md
-          - LoboShell: pages/code/projects/lobo-shell.md
-          - ParallelFFT: pages/code/projects/parallel-fft.md
-          - SmallTalk: pages/code/projects/smalltalk.md
+          - NeuroLoop: projects/neuroloop.md
+          - FathomView: projects/fathomview.md
+          - FathomMap: projects/fathommap.md
+          - LoboShell: projects/lobo-shell.md
+          - ParallelFFT: projects/parallel-fft.md
+          - SmallTalk: projects/smalltalk.md
   - Non-Code:
       - Vehicles:
           - Xterra:

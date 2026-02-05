@@ -40,7 +40,7 @@ The model is trained using supervised learning on paired datasets of underwater 
 
 ## Results
 
-![FathomView Before and After](../../../assets/code/fathomview/fv-before-after.png)
+![FathomView Before and After](../assets/code/fathomview/fv-before-after.png)
 /// caption
 Comparing FathomView's output across datasets.  
 Left: Trained on EUVP dataset.  

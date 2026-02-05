@@ -33,7 +33,7 @@ evaluate and compare multiple retrieval pipelines for underwater imagery.
 The project explores how different _Descriptors_ (feature extractors) and
 _Searchers_ affect retrieval accuracy and efficiency, with a particular focus on
 leveraging learned representations from the
-**[FathomView](../../../pages/code/projects/fathomview.md)** UNet model - a previous project for
+**[FathomView](../projects/fathomview.md)** UNet model - a previous project for
 enhancing underwater images.
 
 Given a query image, FathomMap first extracts a compact feature vector using an
@@ -54,10 +54,10 @@ of feature extraction, image/feature storage and similarity search.
 ## Results
 
 _The following MSE and MS-SSIM metrics are explained more in my complementary
-project - [FathomView](../../../pages/code/projects/fathomview.md) - where they were used
+project - [FathomView](../projects/fathomview.md) - where they were used
 to compose a loss function for training a custom UNet model to enhance underwater images._
 
-![FathomMap :: Metrics](../../../assets/code/fathommap/metrics.png)
+![FathomMap :: Metrics](../assets/code/fathommap/metrics.png)
 
 This figure evaluates the accuracy of selected image descriptors.  
 FathomMap's UNet Descriptor outperforms other approaches.  
@@ -67,7 +67,7 @@ model's attention to both pixel-level (MSE) and structural (MS-SSIM) similaritie
 
 ---
 
-![FathomMap :: Search Times](../../../assets/code/fathommap/search-times.png)
+![FathomMap :: Search Times](../assets/code/fathommap/search-times.png)
 
 This figure evaluates the efficiency of selected image searchers/index strategies.  
 The key take-away here is that FAISS outperforms inverted K-Means for UNet descriptors

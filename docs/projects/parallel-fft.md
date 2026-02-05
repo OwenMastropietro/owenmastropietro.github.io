@@ -30,7 +30,7 @@ to highlight how each threading model interacts with modern CPU architectures.
 See the [What is the FFT](#what-is-the-fft) section below for a brief primer on
 the Fast Fourier Transform and its use cases.  
 I have another project that shows the FFT in action, transforming speech into
-feature-rich frequency bins for a simple [FPGA Speech Recognizer](../../../pages/code/projects/smalltalk.md)!
+feature-rich frequency bins for a simple [FPGA Speech Recognizer](../projects/smalltalk.md)!
 
 FFT Implementations:
 
@@ -78,17 +78,17 @@ _Vertical lines approximate cache expenditure._
 
 <div class="grid cards" markdown>
 
-**Runtime** ![PFFT Runtime](../../../assets/code/fft/runtime.png)
+**Runtime** ![PFFT Runtime](../assets/code/fft/runtime.png)
 
-**Speedup** ![PFFT Speedup](../../../assets/code/fft/speedup.png)
+**Speedup** ![PFFT Speedup](../assets/code/fft/speedup.png)
 
-**Cache Misses** ![PFFT Cache Misses](../../../assets/code/fft/cache-misses.png)
+**Cache Misses** ![PFFT Cache Misses](../assets/code/fft/cache-misses.png)
 
-**Branch Mispredictions** ![PFFT Branch Mispredictions](../../../assets/code/fft/branch-mispredicts.png)
+**Branch Mispredictions** ![PFFT Branch Mispredictions](../assets/code/fft/branch-mispredicts.png)
 
-**Runtime vs. Cache Misses** ![PFFT Runtime vs Cache Misses](../../../assets/code/fft/runtime-vs-cache-misses.png)
+**Runtime vs. Cache Misses** ![PFFT Runtime vs Cache Misses](../assets/code/fft/runtime-vs-cache-misses.png)
 
-**Speedup vs. Thread Count** ![PFFT Speedup vs Threads](../../../assets/code/fft/speedup-vs-threads.png)
+**Speedup vs. Thread Count** ![PFFT Speedup vs Threads](../assets/code/fft/speedup-vs-threads.png)
 
 </div>
 
@@ -311,13 +311,13 @@ of the even-indexed and odd-indexed samples (with appropriate _twiddle factors_)
 
 <div class="grid" markdown>
 
-![yes](../../../assets/code/fft/decomp.png)
+![yes](../assets/code/fft/decomp.png)
 Example decomposition of an input signal (e.g., a chord) into its 5 corresponding
 pure frequencies.  
 A given point in the input signal is the sum of the corresponding
 point in the derived pure frequencies.
 
-![yes 2](../../../assets/code/fft/decomp-2.png)
+![yes 2](../assets/code/fft/decomp-2.png)
 Another example, illustrating the conversion from the time to the frequency domain.  
 Notice the peaks at 1 and 10 Hz corresponding to the 1x and 10x components of the input signal.
 
@@ -335,7 +335,7 @@ This is my attempt at summarizing the hours of information I learned from the fo
 
     I want to make a diagram for the bit reversal step of the iterative FFT.
 
-To see the FFT in action, check out [SmallTalk](../../../pages/code/projects/smalltalk.md) - my other project utilizing
+To see the FFT in action, check out [SmallTalk](../projects/smalltalk.md) - my other project utilizing
 the FFT for feature extraction in a simple FPGA-driven Speech Recognizer.
 
 !!! note
@@ -354,7 +354,7 @@ the FFT for feature extraction in a simple FPGA-driven Speech Recognizer.
 
     However, when implemented in hardware, the FFT does benefit from butterfly-level
     parallelization.<br>
-    Check out my project [SmallTalk](../../../pages/code/projects/smalltalk.md)
+    Check out my project [SmallTalk](../projects/smalltalk.md)
     to learn more about this!
 
 ---

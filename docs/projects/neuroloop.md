@@ -29,17 +29,17 @@ Optimizes the open-loop regime described in (_[Schmalz & Jumar, 2019](https://do
 
 <div class="grid cards" markdown>
 
-**Training Loss** ![Training Loss Graph](../../../assets/code/neuroloop/training-loss.png)
+**Training Loss** ![Training Loss Graph](../assets/code/neuroloop/training-loss.png)
 
-**Episode Reward Mean** ![Episode Reward Graph](../../../assets/code/neuroloop/ep-rew-mean.png)
+**Episode Reward Mean** ![Episode Reward Graph](../assets/code/neuroloop/ep-rew-mean.png)
 
-**Neural Synchronization** ![Sync Graph](../../../assets/code/neuroloop/kop-1600-400.png)
+**Neural Synchronization** ![Sync Graph](../assets/code/neuroloop/kop-1600-400.png)
 
-**Mean Synaptic Weight** ![Syn Wt Graph](../../../assets/code/neuroloop/w_ie-1600-400.png)
+**Mean Synaptic Weight** ![Syn Wt Graph](../assets/code/neuroloop/w_ie-1600-400.png)
 
-**Neuron Spike Times (pre-stim)** ![pre-stim spikes graph](../../../assets/code/neuroloop/spikes-pre.png)
+**Neuron Spike Times (pre-stim)** ![pre-stim spikes graph](../assets/code/neuroloop/spikes-pre.png)
 
-**Neuron Spike Times (post-stim)** ![post-stim spikes graph](../../../assets/code/neuroloop/spikes-post.png)
+**Neuron Spike Times (post-stim)** ![post-stim spikes graph](../assets/code/neuroloop/spikes-post.png)
 
 </div>
 

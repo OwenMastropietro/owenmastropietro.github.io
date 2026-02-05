@@ -98,7 +98,7 @@ hardware components that compose the FFT - described in the next section.
 
 ??? info "Diagram: WM8731 Audio Codec"
 
-    ![Audio Codec](../../../assets/code/fft/wm8731-block-diagram.png)
+    ![Audio Codec](../assets/code/fft/wm8731-block-diagram.png)
 
 ---
 
@@ -216,7 +216,7 @@ To illustrate the process so far (i.e., record speech, buffer frames, compute FF
 I recorded myself speaking the english vowels (a, e, i, o, u) and fed it through
 the pipeline. The resulting plots are shown below.
 
-![TD to FD Signals](../../../assets/code/fft/time-domain-vs-spec.png)
+![TD to FD Signals](../assets/code/fft/time-domain-vs-spec.png)
 /// caption
 Top: time-domain plot (stream of amplitude values).<br>
 Bottom: frequency-domain plot (windowed FFT magnitudes).
@@ -257,7 +257,7 @@ the frequeny-domain where different phonemes and words exhibit different spectra
 patterns. This makes the FFT-derived features far more discriminative than raw
 time-domain samples.
 
-![phonemes](../../../assets/code/fft/Praat2.2.gif)
+![phonemes](../assets/code/fft/Praat2.2.gif)
 /// caption
 Illustration of phonemes spoken by different people (top vs. bottom).
 ///
