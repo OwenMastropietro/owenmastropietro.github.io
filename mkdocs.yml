@@ -35,7 +35,6 @@ theme:
 
 nav:
   - Home: index.md
-  - Resume: pages/home/resume.md
 
   - Code:
       - Projects:

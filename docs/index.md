@@ -8,8 +8,6 @@
             <a href="https://github.com/owenmastropietro">GitHub</a>
             |
             <a href="https://www.linkedin.com/in/owenmastropietro/">LinkedIn</a>
-            |
-            <a href="/pages/home/resume/">Résumé</a>
         </p>
     </div>
 </div>
