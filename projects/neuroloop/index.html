@@ -1,0 +1,1967 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../fathomview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>NeuroLoop - Owen Mastro</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CConsolas:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Consolas"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/custom.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#neuroloop" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Owen Mastro" class="md-header__button md-logo" aria-label="Owen Mastro" data-md-component="logo">
+      
+  <img src="../../assets/portrait-med.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Owen Mastro
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NeuroLoop
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Owen Mastro" class="md-nav__button md-logo" aria-label="Owen Mastro" data-md-component="logo">
+      
+  <img src="../../assets/portrait-med.png" alt="logo">
+
+    </a>
+    Owen Mastro
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuroLoop
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NeuroLoop
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neural-system-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neural System Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reward Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvinit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvreset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvaction_space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.action_space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvobservation_space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.observation_space
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fathomview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FathomView
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fathommap/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FathomMap
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lobo-shell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    LoboShell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallel-fft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ParallelFFT
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../smalltalk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SmallTalk
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Non-Code
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Non-Code
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vehicles
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Vehicles
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_1" id="__nav_3_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Xterra
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Xterra
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/home/vehicles/xterra/build-list/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Build List
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/home/vehicles/xterra/gallery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Gallery
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pages/home/fitness/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fitness
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#results" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Results
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="System Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#neural-system-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Neural System Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#control-objective" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Control Objective
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#problem-formulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Formulation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#action-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Action Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state-space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        State Space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reward-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reward Function
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Methods
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvinit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.init
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvreset" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.reset
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvstep" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Attributes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Attributes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvaction_space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.action_space
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dbsenvobservation_space" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        DBSEnv.observation_space
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="neuroloop">NeuroLoop<a class="headerlink" href="#neuroloop" title="Permanent link">&para;</a></h1>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></span> <a href="https://github.com/ftsts/neuroloop">source code</a></p>
+<hr />
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p><img src="/assets/code/ftsts-logo.png"
+     alt="NeuroLoop Logo"
+     width="48"
+     style="float: left; margin-right: 12px;"/></p>
+<p><em>Closed-Loop Deep-Brain Stimulation for Controlling Synchronization of Spiking Neurons.</em></p>
+<p align="center">
+    <img src="/assets/code/neuroloop/system-overview.jpg" alt="ftsts-logo" width="400"/>
+  <br>
+  <em>The overall architecture of this work.</em>
+</p>
+
+<p><strong>NeuroLoop</strong> implements a closed-loop deep brain stimulation (cl-DBS) system to modulate neural synchronization in a computational model of the brain, optimizing the open-loop regime described in (<em><a href="https://doi.org/10.3389/fncom.2019.00061">Schmalz &amp; Kumar, 2019</a></em>) by implementing a Reinforcement-Learning (RL) driven feedback controller that adjusts stimulation parameters based on real-time measurements of network synchronization.</p>
+<p>Pathological neural synchronization is a fundamental characteristic of several neurological and neuropsychiatric disorders, including Parkinson’s disease, epilepsy, and major depressive disorder, where excessive coupling between neural populations can directly contribute to debilitating symptoms such as tremor, seizures, and cognitive impairment.
+Deep brain stimulation (<a href="https://en.wikipedia.org/wiki/Deep_brain_stimulation">DBS</a>) is an established therapy for modulating abnormal activity, but current clinical systems often operate in an open-loop manner, delivering stimulation continuously without adapting to the brain’s evolving state.</p>
+<hr />
+<h2 id="results">Results<a class="headerlink" href="#results" title="Permanent link">&para;</a></h2>
+<div class="grid cards">
+<p><strong>Training Loss</strong> <img alt="Training Loss Graph" src="../../assets/code/neuroloop/training-loss.png" /></p>
+<p><strong>Episode Reward Mean</strong> <img alt="Episode Reward Graph" src="../../assets/code/neuroloop/ep-rew-mean.png" /></p>
+<p><strong>Neural Synchronization</strong> <img alt="Sync Graph" src="../../assets/code/neuroloop/kop-1600-400.png" /></p>
+<p><strong>Mean Synaptic Weight</strong> <img alt="Syn Wt Graph" src="../../assets/code/neuroloop/w_ie-1600-400.png" /></p>
+<p><strong>Neuron Spike Times (pre-stim)</strong> <img alt="pre-stim spikes graph" src="../../assets/code/neuroloop/spikes-pre.png" /></p>
+<p><strong>Neuron Spike Times (post-stim)</strong> <img alt="post-stim spikes graph" src="../../assets/code/neuroloop/spikes-post.png" /></p>
+</div>
+<p>Successfully learns to reduce neural synchronization and forces a spiking pattern.</p>
+<hr />
+<h2 id="system-model">System Model<a class="headerlink" href="#system-model" title="Permanent link">&para;</a></h2>
+<p>This section describes the neural system model, control objectives, and reinforcement learning formulation underlying the <strong>NeuroLoop</strong> framework.</p>
+<h3 id="neural-system-model">Neural System Model<a class="headerlink" href="#neural-system-model" title="Permanent link">&para;</a></h3>
+<p><strong>Excitatory-Inhibitory (EI) Network Model</strong></p>
+<p>The neural system in this work is an Excitatory-Inihibitory (EI) Network of Leaky-Integrate-and-Fire (LIF) Neurons with Spike-Timing-Dependent Plasticity.
+The following LIF model (<em><a href="https://doi.org/10.1162/neco.2006.18.5.1066">Brunel &amp; Hansel, 2006</a>; <a href="https://doi.org/10.1371/journal.pcbi.1004720">Vlachos et al., 2016</a></em>) describes a single neuron's dynamics in the EI network:</p>
+<div class="arithmatex">\[
+\tau_m \frac{d v_i(t)}{d t} =
+  - v_i(t)
+  + Z_i(t)
+  + \mu_i
+  + \sigma_i \sqrt{\tau_m}\,\chi(t)
+  + V_i(t)
+\]</div>
+<div class="arithmatex">\[
+Z_i(t) = \frac{J_\text{ij}}{C_\text{ij}} S_\text{ij}(t)
+\]</div>
+<div class="arithmatex">\[
+\tau_d \frac{d S_\text{ij}(t)}{d t}
+=
+- S_\text{ij}(t)
++ X_\text{ij}(t)
+\]</div>
+<div class="arithmatex">\[
+\tau_r \frac{d X_\text{ij}(t)}{d t}
+=
+- X_\text{ij}(t)
++ W_\text{ij}(t) \delta(t - t_\text{pre} + t_\text{delay})
+\]</div>
+<details class="info">
+<summary>Description of Terms</summary>
+<blockquote>
+<p>Note: <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> <span class="arithmatex">\(\epsilon \{E, I\}\)</span>, denoting a neuron population.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Units</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\tau_m\)</span></td>
+<td>ms</td>
+<td>Membrane time constant.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(v_i(t)\)</span></td>
+<td>mV</td>
+<td>The neuron's membrane potential.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(Z_i(t)\)</span></td>
+<td>n/a</td>
+<td>The synaptic input to the neuron population.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\mu_i + \sigma_i \sqrt{\tau_m} \chi(t)\)</span></td>
+<td>n/a</td>
+<td>Gaussian distributed baseline current to the neuron.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\chi(t)\)</span></td>
+<td>n/a</td>
+<td>White noise with a mean of 0 and variance of 1.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_i(s)\)</span></td>
+<td>mV</td>
+<td>External stimulation to the neuron.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(J_\text{ij}\)</span></td>
+<td>mV</td>
+<td>Synaptic strength between a presynaptic j-neuron and postsynaptic i-neuron.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(S_\text{ij}(t)\)</span></td>
+<td>n/a</td>
+<td>The synaptic function.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tau_d, \tau_r\)</span></td>
+<td>ms</td>
+<td>Decay and rise time constants.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X_\text{ij}\)</span></td>
+<td>n/a</td>
+<td>Input to the <span class="arithmatex">\(i^\text{th}\)</span> population from the $j^\text{th} population.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(W_\text{ij}(t)\)</span></td>
+<td>n/a</td>
+<td>The weights of each synaptic connection (plastic).</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\delta(t - t_\text{pre} + t_\text{delay})\)</span></td>
+<td>n/a</td>
+<td>The Dirac-Delta function modeling synaptic input to a postsynaptic neuron from a presynaptic neuron when the presynaptic neuron fires at time <span class="arithmatex">\(t_\text{pre}\)</span> with a synaptics delay of <span class="arithmatex">\(t_\text{delay}\)</span>.</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><strong>Spike-Timing-Dependent Plasticity (STDP) Model</strong></p>
+<p>The coupling value of the plastic EI synapse (<span class="arithmatex">\(W_\text{EI}(t)\)</span>) is governed by STDP (<em><a href="https://doi.org/10.1038/78829">Song et al., 2000</a>; <a href="https://doi.org/10.3389/fncom.2014.00154">Ebert et al., 2014</a></em>), defined as follows:</p>
+<div class="arithmatex">\[
+W_\text{IE}(t + \Delta t) = W_\text{IE}(t) + \Delta W_\text{IE}(t)
+\]</div>
+<div class="arithmatex">\[
+\Delta W_\text{IE}(t) =
+  \begin{cases}
+    \eta_e \alpha_\text{LTP} A_\text{post}, &amp; \text{if } t_\text{pre} - t_\text{post} &lt; 0 \\
+    \eta_e \alpha_\text{LTD} A_\text{pre}, &amp; \text{if } t_\text{pre} - t_\text{post} &gt; 0
+  \end{cases}
+\]</div>
+<div class="arithmatex">\[
+\tau_\text{LTP} \frac{d A_\text{post}}{d t} = - A_\text{post} + A_0 \delta(t - t_\text{post})
+\]</div>
+<div class="arithmatex">\[
+\tau_\text{LTD} \frac{d A_\text{pre}}{d t} = - A_\text{pre} + A_0 \delta(t - t_\text{pre})
+\]</div>
+<details class="info">
+<summary>Description of Terms</summary>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Units</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(W_\text{ij}(t)\)</span></td>
+<td>n/a</td>
+<td>The weights of each synaptic connection (plastic).</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\Delta W_\text{IE}\)</span></td>
+<td>n/a</td>
+<td>The change in synaptic weight determined by the spike-time of a presynaptic (<span class="arithmatex">\(t_\text{pre}\)</span>) and postsynaptic (<span class="arithmatex">\(t_\text{post}\)</span>) neuron.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\eta_e\)</span></td>
+<td>n/a</td>
+<td>The rate at which the E-to-I synaptic coupling changes.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\alpha_{LTP}, \alpha_{LTD}\)</span></td>
+<td>n/a</td>
+<td>The relative contributions of LTP and LTD to <span class="arithmatex">\(\Delta W_\text{IE}\)</span>.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\tau_\text{LTP}, \tau_\text{LTD}\)</span></td>
+<td>ms</td>
+<td>STDP time constants defining the size of the long-term potentiation and long-term depression time window.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A_0\)</span></td>
+<td>n/a</td>
+<td>Fixed jump added to a trace at each spike.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A_\text{pre}\)</span></td>
+<td>n/a</td>
+<td>Presynaptic spike trace (decaying memory of recent pre spikes).</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(A_\text{post}\)</span></td>
+<td>n/a</td>
+<td>Postsynaptic spike trace (decaying memory of recent post spikes).</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="control-objective">Control Objective<a class="headerlink" href="#control-objective" title="Permanent link">&para;</a></h3>
+<p>The primary objective of <strong>NeuroLoop</strong> is to supress pathological neural synchronization while minimizing the required stimulation intensity to do so.
+Excessive stimulation amplitude is undesirable due to increased energy consumption and the risk of stimulation-induced side effects.
+Control is implemented in a closed-loop manner, where stimulation parameters are continuously adjusted based on real-time observations of neural activity.</p>
+<p>At each control timestep, stimulation amplitude is applied to the neural system according to the FTSTS motif.
+The resulting neural dynamics are observed, enabling the controller to respond to changes in network state.
+The control objective and feedback signals are formalized in the following section.</p>
+<h3 id="problem-formulation">Problem Formulation<a class="headerlink" href="#problem-formulation" title="Permanent link">&para;</a></h3>
+<p><strong>NeuroLoop</strong> is formulated as a Markov Decision Process (<a href="https://en.wikipedia.org/wiki/Markov_decision_process">MDP</a>) defined by the tuple <nobr>(<span class="arithmatex">\(S, A, P, R\)</span>)</nobr>.</p>
+<div class="admonition info">
+<p class="admonition-title">MDP Terms</p>
+<p><span class="arithmatex">\(S\)</span> - The state space; encodes the feedback signals.<br />
+<span class="arithmatex">\(A\)</span> - The action space; encodes the control signals (canonical DBS parameters).<br />
+<span class="arithmatex">\(P\)</span> - The transition dynamics.<br />
+<span class="arithmatex">\(R\)</span> - The reward function; encodes the control objective.</p>
+</div>
+<h3 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h3>
+<p><strong>NeuroLoop</strong> wraps the <a href="#neural-system-model">neural model</a> described above in a <a href="https://gymnasium.farama.org/">Gymnasium</a>-style environment for developing a Reinforcement Learning (<a href="https://en.wikipedia.org/wiki/Reinforcement_learning">RL</a>) controller as depicted in the figure at the top of this page.
+This environment structure provides a standard interface to the action space, state space, reward function, and episode configuration for the RL agent to interact with.</p>
+<pre class="mermaid"><code>flowchart LR
+
+    subgraph gym [Gymnasium]
+      nn(Neural Model)
+      env(FTSTSEnv)
+    end
+
+    subgraph controller [Controller Unit]
+      agent(RL Algorithm)
+      features(Feature Extraction)
+    end
+
+    agent -- action --&gt; env
+    env -- reward --&gt; agent
+    env -- state --&gt; features
+    features -- state --&gt; agent
+    env --&gt; nn --&gt; env</code></pre>
+<h4 id="action-space">Action Space<a class="headerlink" href="#action-space" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Index</th>
+<th>Action</th>
+<th>Unit</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td>Amplitude</td>
+<td>mV</td>
+<td>[10, 200]</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Frequency</td>
+<td>Hz</td>
+<td>[5, 128]</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Pulse Width</td>
+<td><span class="arithmatex">\(\mu\)</span>s</td>
+<td>[50, 500]</td>
+</tr>
+</tbody>
+</table>
+<p>The agent’s action space consists of a single continuous variable corresponding to the stimulation amplitude applied within the FTSTS framework.
+The remaining canonical DBS parameters (i.e., frequency and pulse width) are fixed according to the FTSTS motif, allowing the effects of adaptive amplitude modulation to be isolated and analyzed.
+Actions are represented in a normalized space and linearly rescaled to the biophysically meaningful stimulation range prior to application.
+For example, the stimulation amplitude is a continuous variable internally normalized to the range [−1, 1] and mapped to the suggested range of [10, 200].</p>
+<h4 id="state-space">State Space<a class="headerlink" href="#state-space" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Index</th>
+<th>Observation</th>
+<th>Unit</th>
+<th>Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">0</td>
+<td>Synchrony</td>
+<td>n/a</td>
+<td>[0, 1]</td>
+</tr>
+<tr>
+<td style="text-align: center;">1</td>
+<td>Mean Excitatory Membrane Voltage</td>
+<td>mV</td>
+<td>[−80, 50]</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td>Std. Excitatory Membrane Voltage</td>
+<td>mV</td>
+<td>[0, 30]</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td>Mean Inhibitory Membrane Voltage</td>
+<td>mV</td>
+<td>[−80, 50]</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td>Std. Inhibitory Membrane Voltage</td>
+<td>mV</td>
+<td>[0, 30]</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td>Mean <span class="arithmatex">\(I \rightarrow E\)</span> Synaptic Weight</td>
+<td>n/a</td>
+<td>[0, 1]</td>
+</tr>
+</tbody>
+</table>
+<div class="arithmatex">\[
+s_t = (synchrony, \mu_{V_E}, \sigma_{V_E}, \mu_{V_I}, \sigma_{V_I}, \mu_{W_\text{EI}})
+\]</div>
+<p>At each control timestep, the reinforcement learning agent observes a compact state vector derived from population-level neural statistics.
+All feedback signals are aggregated over a fixed temporal window and standardized prior to control by subtracting a running mean and dividing by a running standard deviation computed over interaction trajectories.
+This normalization ensures that each state dimension has approximately zero mean and unit variance, stabalizing learning dynamics across stimulation regimes.</p>
+<p>The <strong>synchrony</strong> measurement used here is a per-timestep estimate of voltage-based population synchrony suitable for closed-loop control.</p>
+<div class="arithmatex">\[
+synchrony =
+  \sqrt{\frac
+    {\sigma_t(\bar{v}(t))}
+    {\frac{1}{N} \sum_{i=1}^N \sigma_t(v_i(t))}
+  }
+\]</div>
+<div class="arithmatex">\[
+\bar{v}(t) = \frac{1}{N} \sum_{i=1}^N v_i(t)
+\]</div>
+<p>where <span class="arithmatex">\(v_i(t)\)</span> is the membrane potential of neuron <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(\bar{v}(t)\)</span> is the population mean voltage.
+Values near zero indicate asynchronous activity while larger values indicate increased levels of synchronization of spiking patterns.
+While less accurate, this synchrony index is an efficient estimation of population-level synchrony that can be used as a feedback signal each step of the episode.</p>
+<p>The <strong>mean population-level membrane potentials</strong>, (<span class="arithmatex">\(\mu_{V_E}\)</span>, <span class="arithmatex">\(\mu_{V_I}\)</span>), help define fragile vs robust network states relative to the firing threashold.
+Without these feedback signals, highly excitable networks exhibiting high levels of synchrony may receive additional stimulation to reduce the synchronization at the cost of destabalizing the network into runaway firing.</p>
+<p>The <strong>standard deviation of population-level membrane potentials</strong>, (<span class="arithmatex">\(\sigma_{V_I}\)</span>, <span class="arithmatex">\(\sigma_{V_I}\)</span>), offer insight into the coherence of the network.
+Without these feedback signals, we may fail to disambiguate two main modes of reducing synchrony: descynchronization and silencing.
+The desired desynchronization involves breaking phase-locked oscillations while silencing involves entirely suppressing activity.</p>
+<p>The inclusion of mean and variance signals of exchitatory and inhibitory membrane potentials allows inference of the stability and coherence of the neural population, resolving ambiguities that cannot be captured by sunchrony measueres alone.</p>
+<p>The <strong>mean inhibitory-to-excitatory synaptic coupling</strong> value, <span class="arithmatex">\(\mu_{W_\text{IE}}\)</span>, of the plastic E-to-I synapse is governed by the underlying STDP model.
+This feedback signal represents the effective strength of the inhibitory regulation exerted on excitatory neurons, capturing slower-evolving network properties that influence stability and synchrony.
+Additionally, as shown in the graph below, the mean synaptic weight is highly correlated with the ground-truth synchrony measurement - the Kuramoto Order Parameter (<em><a href="https://link.springer.com/book/10.1007/978-3-642-69689-3">Kuramoto, 1984</a>; <a href="https://doi.org/10.1143/ptp/88.6.1213">Daido, 1992</a>; <a href="https://link.springer.com/book/10.1007/978-3-540-38161-7">Tass, 2007</a>; <a href="https://doi.org/10.3389/fncom.2014.00154">Ebert et al., 2014</a></em>).
+Incorporating this feedback signal enables stimulation to be adapted in response to changes in synaptic interactions rather than instantaneous activity alone and serves as a secondary strong proxy for the true synchrony index.</p>
+<p align="center">
+    <!-- <img src="/assets/code/neuroloop/neuroloop-system-overview.png" alt="ftsts-logo" width="300"/> -->
+    <img src="/assets/code/neuroloop/asw-vs-kop.png" alt="asw-vs-kop" width="400"/>
+  <br>
+  <em>Correlating average synaptic weight with the Kuramoto Order Parameter.</em>
+</p>
+
+<h4 id="reward-function">Reward Function<a class="headerlink" href="#reward-function" title="Permanent link">&para;</a></h4>
+<p>The reward function consists of a dense per-timestep component and an additional terminal penalty based on the Kuramoto Order Parameter, balancing synchronization suppression against stimulation cost:</p>
+<div class="arithmatex">\[
+R(t) =
+  \begin{cases}
+      -\alpha r_1 - \beta r_2 - \gamma r_3, &amp; t &lt; T \\
+      -\alpha r_1 - \beta r_2 - \gamma r_3 - \delta r_4, &amp; \text{t = T}
+  \end{cases}
+\]</div>
+<p>where <span class="arithmatex">\(r_1\)</span>, <span class="arithmatex">\(r_2\)</span>, <span class="arithmatex">\(r_3\)</span>, and <span class="arithmatex">\(r_4\)</span> are respectively identified as “synchrony,” “squared stimulation amplitude,” "mean synaptic weight," and “Kuramoto Order (Synchrony) Parameter.”
+Weighting coefficients <span class="arithmatex">\(\alpha\)</span>, <span class="arithmatex">\(\beta\)</span>, <span class="arithmatex">\(\gamma\)</span>, and <span class="arithmatex">\(\delta\)</span> help control the trade-off between desynchronization performance and stimulation intensity, encouraging the agent to suppress pathological synchronization while avoiding unnecessarily large stimulation amplitudes.
+Additionally, the reward signal is normalized using running estimates of its mean and variance.</p>
+<p>The <strong>synchrony</strong> measurement used for the first reward component is the same as that described in the <a href="#state-space">state space</a>.
+This synchrony term directly encodes the control objective of descynchronization.
+Penalizing high degrees of synchrony aligns the learned objective with clinical findings that excessive population synchrony is linked to pathological motor symptoms.</p>
+<div class="arithmatex">\[
+r_1 = \text{synchrony}_t
+\]</div>
+<p>The quadratic penalty on <strong>stimulation amplitude</strong> reflects constraints on DBS energy consumption and safety.
+Squaring the amplitude disproportionaly penalizes larger stimulation values, further encouraging minimal energy usage.</p>
+<div class="arithmatex">\[
+r_2 = a_t^2
+\]</div>
+<p>The <strong>mean synaptic weight</strong>, <span class="arithmatex">\(\mu_{W_\text{IE}}\)</span>, is the same as that described in the <a href="#state-space">state space</a>.
+As mentioned in that section, this state variable captures network adaptation governed by STDP, not just instantaneous dynamics.
+Penalizing inhibitory-to-excitatory synaptic coupling discourages control strategies that rely on long-term synaptic adjustments rather than short-term modulation of neural activity.
+This promotes stimulation policies that achieve desynchronization while preserving stable network connectivity.</p>
+<div class="arithmatex">\[
+r_3 = \mu_{W_\text{IE}}
+\]</div>
+<p>The final component of the reward function is another measurement of synchrony.
+As mentioned in the <a href="#state-space">state space</a>, the per-step voltage-based synchrony measurement is useful for dense feedback.
+It is a more efficient but less accurate proxy for the true synchrony measurement.
+A more accurate measurement of the synchrony level can be obtained by computing the <strong>Kuramoto Order Parameter (KOP)</strong> based on the spike times of neurons in the excitatory population.
+As used in this work, the KOP is a spike-time phase-based approach for computing synchrony which, in DBS, is fundamentally about phase locking.
+It measures the degree of phase locking between oscillatory neural activity across the population.
+While it is more accurate, it is not feasible to compute at every timestep of the simulation.
+It is therefore computed at the end of each episode as a sparse reward component.</p>
+<div class="arithmatex">\[
+r_4 =
+  \begin{cases}
+      \text{KOP}, &amp; t = T \\
+      0, &amp; \text{otherwise}
+  \end{cases}
+\]</div>
+<div class="arithmatex">\[
+\text{KOP}(t)e^{i\psi(t)} = \frac{1}{N_E} \sum_{k=1}^{N_E} e^{i\phi_k(t)}
+\]</div>
+<div class="arithmatex">\[
+\phi_k(t) = \frac{2\pi(t_{k,i+1}-t)}{t_{k,i+1}-t_{k,i}}
+\]</div>
+<p>Jointly, the final reward signal is normalized using running estimates of its mean and variance, maintaining a consistent reward scale and stabalizing training.</p>
+<!-- \section{Learning Algorithm}
+\label{sec:learning-algorithm}
+
+NeuroLoop employs Proximal Policy Optimization (PPO \cite{ppo}), an on-policy policy-gradient algorithm well-suited for stable learning in continuous control problems. PPO combines ideas from Advantage Actor-Critic (A2C) and Trust Region Policy Optimization (TRPO \cite{trpo}) to optimize a stochastic policy while constraining successive policy updates to remain close to the current policy, preventing destructive updates that can destabilize learning in sensitive environments such as neural populations.
+
+The control policy is parameterized as a neural network $\pi_\theta(a_t \mid s_t)$ that maps normalized state observations to a probability distribution over continuous stimulation amplitudes. At each control timestep, the policy samples an action from the distribution, exploiting previously learned stimulation strategies or exploring new stimulations strategies. Simultaneously, a separate value function $V_\theta(s_t)$ is learned to estimate the expected return from a given state and to reduce the variance in the policy gradient updates. During each episode of training, the agent interacts with the neural environment by observing the current state, selecting stimulation amplitudes, and receiving rewards defined in Section~\ref{sec:reward-function}. Sampled experience trajectories are then collected and used to update the policy and value function parameters via stochastic gradient ascent on PPO's clipped surrogate objective. This objective limits the magnitudes of policy updates by clipping the probability ratio between the new and old policies, ensuring stability \cite{spinning-up}.
+
+\begin{equation}
+\label{eq:ppo-clip}
+    \theta_{k+1} =
+    \arg \max_{\theta} E_{s, a \sim \pi_{\theta_k}} [L(s, a, \theta_k, \theta)]
+\end{equation}
+
+PPO was selected for its support for continuous action spaces without requiring complex second-order optimization, its clipped objective which makes it robst to reward scaling and the stochastic dynamics inherent in spiking neural simulations, and its demonstrated performance in a wide range of control tasks where safety, training stability, and smooth control signals are important \cite{ppo-studies}. All training is performed in silico using the Stable-Baselines3 framework \cite{stable-baselines}. Learned policies are evaluated without exploration noise to analyze closed-loop stimulation performance. -->
+
+<hr />
+<h2 id="api">API<a class="headerlink" href="#api" title="Permanent link">&para;</a></h2>
+<p><code class="language-python highlight"><span class="k">class</span><span class="w"> </span><span class="nc">gymnasium</span><span class="o">.</span><span class="n">Env</span></code><br />
+<code class="language-python highlight"><span class="k">class</span><span class="w"> </span><span class="nc">dbsenv</span><span class="o">.</span><span class="n">envs</span><span class="o">.</span><span class="n">DBSEnv</span><span class="p">(</span><span class="n">gymnasium</span><span class="o">.</span><span class="n">Env</span><span class="p">)</span></code><br />
+<code class="language-python highlight"><span class="k">class</span><span class="w"> </span><span class="nc">dbsenv</span><span class="o">.</span><span class="n">envs</span><span class="o">.</span><span class="n">FTSTSEnv</span><span class="p">(</span><span class="n">DBSEnv</span><span class="p">)</span></code></p>
+<p>The main Gymnasium class for implementing Reinforcement Learning Agent environments.</p>
+<p>The class encapsulates an environment with arbitrary behind-the-scenes dynamics through the <code>step()</code> and <code>reset()</code> methods.</p>
+<p>The main API methods that users of this class need to know are:</p>
+<ul>
+<li><a href="#dbsenvstep"><code>step()</code></a> - Updates an environment by taking an action and returning the
+  agent's observation, the reward for taking that action, whether the environment
+  has terminated or truncated, and auxiliary diagnostic information.</li>
+<li><a href="#dbsenvreset"><code>reset()</code></a> - Resets the environment to an initial state, returning an initial observation and auxiliary diagnostic
+  information. Required before the first call to <code>step()</code>.</li>
+<li><code>render()</code> - Renders the environment to help visualize what the agent sees.</li>
+<li><code>close()</code> - Closes the environment and frees up resources.</li>
+</ul>
+<hr />
+<h3 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h3>
+<h4 id="dbsenvinit">DBSEnv.init<a class="headerlink" href="#dbsenvinit" title="Permanent link">&para;</a></h4>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DBSEnv</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">sim_config</span><span class="p">:</span>   <span class="n">SimConfig</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">model_class</span><span class="p">:</span>  <span class="nb">type</span><span class="p">[</span><span class="n">NeuralModel</span><span class="p">],</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">model_params</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">render_mode</span><span class="p">:</span>  <span class="nb">str</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
+</span></code></pre></div>
+<p>PARAMETERS:</p>
+<ul>
+<li><code>sim_config</code> – Simulation configuration (timing, sampling, resolution)</li>
+<li><code>model_class</code> – Neural model class implementing the spiking dynamics</li>
+<li><code>model_params</code> – Optional model-specific keyword arguments</li>
+<li><code>render_mode</code> – Optional Gymnasium render mode</li>
+</ul>
+<h4 id="dbsenvreset">DBSEnv.reset<a class="headerlink" href="#dbsenvreset" title="Permanent link">&para;</a></h4>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">DBSEnv</span><span class="o">.</span><span class="n">reset</span><span class="p">(</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="n">seed</span><span class="p">:</span>    <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    <span class="n">options</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">dict</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ObsType</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]:</span>
+</span></code></pre></div>
+<p>Resets the environment to an initial state (reinitializing plasticity,
+stimulation timing, internal counters, etc.), returning an initial observation
+and info.</p>
+<p>PARAMETERS:</p>
+<ul>
+<li><code>seed (optional int)</code> – The seed that is used to initialize the environment's
+  PRNG (<em>np_random</em>) and the read-only attribute <em>np_random_seed</em>.</li>
+<li><code>options (optional dict)</code> – Additional information to specify how the
+  environment is reset.</li>
+</ul>
+<p>RETURNS:</p>
+<ul>
+<li><code>observation (ObsType)</code> – Observation of the initial state.</li>
+<li><code>info (dict)</code> – Auxiliary diagnostic information complementing the observation.</li>
+</ul>
+<h4 id="dbsenvstep">DBSEnv.step<a class="headerlink" href="#dbsenvstep" title="Permanent link">&para;</a></h4>
+<div class="language-py highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">DBSEnv</span><span class="o">.</span><span class="n">step</span><span class="p">(</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="n">action</span><span class="p">:</span> <span class="n">ActType</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">ObsType</span><span class="p">,</span> <span class="n">SupportsFloat</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]]</span>
+</span></code></pre></div>
+<p>Runs one timestep of the environment's dynamics using the agent's actions.</p>
+<p>PARAMETERS:</p>
+<ul>
+<li><code>action (ActType)</code> – an action provided by the agent to update the environment state.</li>
+</ul>
+<p>RETURNS:</p>
+<ul>
+<li><code>observation (ObsType)</code> – Population-level neural statistics</li>
+<li><code>reward (SupportsFloat)</code> – The reward as a result of taking the action, encouraging (de)synchronization</li>
+<li><code>terminated</code> – Episode termination flag</li>
+<li><code>truncated</code> – Truncation flag (unused)</li>
+<li><code>info</code> – Diagnostic data (e.g., spike timing)</li>
+</ul>
+<hr />
+<h3 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h3>
+<h4 id="dbsenvaction_space">DBSEnv.action_space<a class="headerlink" href="#dbsenvaction_space" title="Permanent link">&para;</a></h4>
+<p>The actions are continuous and normalized internally before being mapped to
+biophysically meaningful stimulation parameters.</p>
+<p>See <a href="#action-space">action space</a></p>
+<h4 id="dbsenvobservation_space">DBSEnv.observation_space<a class="headerlink" href="#dbsenvobservation_space" title="Permanent link">&para;</a></h4>
+<p>Observations are aggregated over a fixed temporal window and normalized
+to ensure stable learning dynamics across stimulation regimes.</p>
+<p>See <a href="#state-space">state space</a></p>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Owen Mastropietro
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/owenmastropietro/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/OwenMastropietro" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33s1.71.11 2.5.33c1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../javascripts/katex.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
+      
+        <script src="https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
