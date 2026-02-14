@@ -1,4 +1,4 @@
-# Welcome to My Documentation
+# Welcome!
 
 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
     <img src="assets/portrait-small.png" alt="Owen" style="width:100px; border-radius:5%;">
@@ -12,10 +12,6 @@
     </div>
 </div>
 
-!!! warning
-
-    This site is under construction.
-
 <!-- !!! quote
 
     _"Functions are functions."_
@@ -26,12 +22,12 @@
 
     _"Locality of behavior supercedes contrived functional decomposition."_ -->
 
-## Interests
+<!-- ## Interests
 
 - `mkdocs new [dir-name]` - Create a new project.
 - `mkdocs serve` - Start the live-reloading docs server.
 - `mkdocs build` - Build the documentation site.
-- `mkdocs -h` - Print help message and exit.
+- `mkdocs -h` - Print help message and exit. -->
 
 ## Selected Projects
 
