@@ -39,4 +39,5 @@ Click a project name!
 - **[ParallelFFT](./projects/parallel-fft.md)** - Parallel Fast Fourier Transform using OpenMP.
 - **[SmallTalk](./projects/smalltalk.md)** - FPGA-Accelerated Speech Recognition using FFT-based Feature Extraction.
 - **[LoboShell](./projects/lobo-shell.md)** - Unix Shell in C.
+- **[CVL](./projects/cvl.md)** - Computer Vision Library in C.
 <!-- - **[Spotlessfy](todo)** - Three-Tier Web-App for Streaming Audio using MySQL, KOA, and React. -->
