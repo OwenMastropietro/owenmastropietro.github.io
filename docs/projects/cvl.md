@@ -6,6 +6,15 @@
 
 ## Overview
 
+<img src="/assets/code/cvl/cvl-logo.png"
+     alt="NeuroLoop Logo"
+     width="48"
+     style="float: left; margin-right: 12px;"/>
+
+_Computer Vision Library in C._
+
+<br/>
+
 **CVL** is a small Computer Vision Library implemented in C that demonstrates image processing on raster images. It supports [Netpbm]() image formats (PBM, PGM, PPM) and various image processing pipelines including thresholding, filtering, connected component labeling, and edge detection.
 
 ## Examples
@@ -13,8 +22,7 @@
 ### Performing Canny Edge Detection
 
 ```c
-#include "cvl_imgproc.h"
-#include "cvl_io.h"
+#include <cvl/cvl.h>
 
 int main(void) {
     Image img = cvl_imread("lena.ppm");
@@ -57,11 +65,13 @@ int main(void) {
 ### Applying a Sobel Filter to an Image
 
 ```c
+#include <cvl/cvl.h>
+
 int main(void) {
     Image img = cvl_imread("lena.ppm");
-    Image bw = cvl_binarize_new(&img, 128);
+    Image binary = cvl_binarize_new(&img, 128);
 
-    Matrix lena = cvl_img2mat(bw);
+    Matrix lena = cvl_img2mat(binary);
     Matrix lena_smooth = cvl_blur_new(&lena, 3);
 
     Matrix gx = cvl_mat_create(lena.height, lena.width);
@@ -76,7 +86,7 @@ int main(void) {
     cvl_binarize(&angs_img, 3.14/2);
 
     cvl_imwrite("original.ppm", &img);
-    cvl_imwrite("binary.pbm", &bw);
+    cvl_imwrite("binary.pbm", &binary);
     cvl_imwrite("mags.pgm", &mags_img);
     cvl_imwrite("angles.pgm", &angs_img);
 
@@ -108,6 +118,8 @@ int main(void) {
 ### Connected Component Labeling
 
 ```c
+#include <cvl/cvl.h>
+
 int main(void) {
     Image img = cvl_imread("text.pgm");
     cvl_binarize(&img, 128);
@@ -221,7 +233,13 @@ Number of Components: 39 `// larger than 100`
 Image cvl_img_create(int height, int width);
 ```
 
-Allocates a new image with the given dimensions and fills it with zeros.
+> Allocates a new image with the given dimensions and fills it with zeros.
+
+```c
+Image cvl_img_create_fill(int height, int width, int value);
+```
+
+> Allocates a new image with the given dimensions and fills it with value.
 
 #### cvl_img_free
 
@@ -229,7 +247,7 @@ Allocates a new image with the given dimensions and fills it with zeros.
 void cvl_img_free(Image img);
 ```
 
-Frees memory associated with an image.
+> Frees memory associated with an image.
 
 #### cvl_mat_create
 
@@ -237,15 +255,13 @@ Frees memory associated with an image.
 Matrix cvl_mat_create(int height, int width);
 ```
 
-Allocates a new matrix with the given dimensions and fills it with zeros.
-
-#### cvl_mat_create_from
+> Allocates a new matrix with the given dimensions and fills it with zeros.
 
 ```c
 Matrix cvl_mat_create_from(double **arr, int height, int width);
 ```
 
-Allocates a new matrix with the given dimensions and fills it with values from the given array.
+> Allocates a new matrix with the given dimensions and fills it with values from the given array.
 
 #### cvl_mat_free
 
@@ -253,7 +269,7 @@ Allocates a new matrix with the given dimensions and fills it with values from t
 void cvl_mat_free(Matrix mat);
 ```
 
-Frees memory associated with a matrix.
+> Frees memory associated with a matrix.
 
 #### cvl_img2mat
 
@@ -261,7 +277,7 @@ Frees memory associated with a matrix.
 Matrix cvl_img2mat(Image img);
 ```
 
-Converts an image to a greyscale matrix.
+> Converts an image to a greyscale matrix.
 
 #### cvl_img2mat
 
@@ -269,15 +285,15 @@ Converts an image to a greyscale matrix.
 Image cvl_mat2img(Matrix mat, int scale, double gamma);
 ```
 
-Converts a matrix to an image with scaling and gamma correction.
-
-- `scale == 0`: values are 1/255 normalized before applying gamma.
-- `scale != 0`: values are min/max normalized before applying gamma.
-- `gamma == 1.0`: linear scaling (no change in contrast).
-- `gamma < 1.0`: enhances darker values (brightens the image).
-- `gamma > 1.0`: suppressess darker values (darkens the image).
-
-The final result is clamped to [0, 255].
+> Converts a matrix to an image with scaling and gamma correction.
+>
+> - `scale == 0`: values are 1/255 normalized before applying gamma.
+> - `scale != 0`: values are min/max normalized before applying gamma.
+> - `gamma == 1.0`: linear scaling (no change in contrast).
+> - `gamma < 1.0`: enhances darker values (brightens the image).
+> - `gamma > 1.0`: suppressess darker values (darkens the image).
+>
+> The final result is clamped to [0, 255].
 
 ---
 
@@ -289,7 +305,7 @@ The final result is clamped to [0, 255].
 Image cvl_imread(const char *filename);
 ```
 
-Reads an image from a specified file.
+> Reads an image from a specified file.
 
 #### cvl_imwrite
 
@@ -297,7 +313,7 @@ Reads an image from a specified file.
 int cvl_imwrite(const char *filename, Image *img);
 ```
 
-Saves an image to a specified file. Image format determined by file extension.
+> Saves an image to a specified file. Image format determined by file extension.
 
 ---
 
@@ -311,13 +327,19 @@ int cvl_threshold(Image *src, Image *dst, int thresh, int maxval, int type);
 Image cvl_threshold_new(Image *src, int thresh, int maxval, int type);
 ```
 
-Applies a fixed-level threshold to each array element - determined by type.
+> Applies a fixed-level threshold to each array element - determined by type.
+
+#### cvl_binarize
 
 ```c
 int cvl_binarize(Image *img, int thresh);
+
+Image cvl_binarize_new(Image *src, int thresh);
 ```
 
-Changes all pixels below thresh to black (0), otherwise to white (255).
+> Changes all pixels below thresh to black (0), otherwise to white (255).
+>
+> Equivalent to [`cvl_threshold(src, dst, thresh, maxval, CVL_THRESH_BINARY)`](#cvl_threshold)
 
 #### cvl_add_noise
 
@@ -325,9 +347,9 @@ Changes all pixels below thresh to black (0), otherwise to white (255).
 void cvl_add_noise(Image *img, double p);
 ```
 
-Adds salt-and-pepper noise to a binary image.
-
-Randomly flips binary pixels with probability p.
+> Adds salt-and-pepper noise to a binary image.
+>
+> Randomly flips binary pixels with probability p.
 
 #### cvl_rotate
 
@@ -335,7 +357,7 @@ Randomly flips binary pixels with probability p.
 void cvl_rotate(Image *img);
 ```
 
-Rotates an image by 180 degrees.
+> Rotates an image by 180 degrees.
 
 #### cvl_invert
 
@@ -343,7 +365,7 @@ Rotates an image by 180 degrees.
 void cvl_invert(Image *img, int maxval);
 ```
 
-Inverts the RGB channels of an image according to the given max value.
+> Inverts the RGB channels of an image according to the given max value.
 
 #### cvl_expand
 
@@ -351,7 +373,7 @@ Inverts the RGB channels of an image according to the given max value.
 void cvl_expand(Image *img);
 ```
 
-Changes all pixels with black neighbors to black.
+> Changes all pixels with black neighbors to black.
 
 #### cvl_shrink
 
@@ -359,7 +381,7 @@ Changes all pixels with black neighbors to black.
 void cvl_shrink(Image *img);
 ```
 
-Changes all pixels with white neighbors to white.
+> Changes all pixels with white neighbors to white.
 
 #### cvl_connected_components
 
@@ -367,14 +389,14 @@ Changes all pixels with white neighbors to white.
 int cvl_connected_components(Image *img, Matrix *labels, int connectivity);
 ```
 
-Performs Connected Component Labeling.
-
-Labels connected regions of black pixels and stores the result in `labels`.
-
-- `@param img` — Input binary image.
-- `@param labels` — Output matrix of same size storing component labels.
-- `@param connectivity` — Neighborhood connectivity (4 or 8).
-- `@return` — Number of connected components found.
+> Performs Connected Component Labeling.
+>
+> Labels connected regions of black pixels and stores the result in `labels`.
+>
+> - `@param img` — Input binary image.
+> - `@param labels` — Output matrix of same size storing component labels.
+> - `@param connectivity` — Neighborhood connectivity (4 or 8).
+> - `@return` — Number of connected components found.
 
 #### cvl_color_components
 
@@ -382,14 +404,14 @@ Labels connected regions of black pixels and stores the result in `labels`.
 int cvl_color_components(const Image *img, Matrix *labels, int thresh);
 ```
 
-Colors connected components exceeding a size threshold.
-
-Components with size greater than or equal to `thresh` are assigned distinct RGB colors in the output image.
-
-- `@param img` — Input image (modified in-place).
-- `@param labels` — Matrix of component labels.
-- `@param thresh` — Minimum component size to be labeled.
-- `@return` — Number of components meeting the size threshold.
+> Colors connected components exceeding a size threshold.
+>
+> Components with size greater than or equal to `thresh` are assigned distinct RGB colors in the output image.
+>
+> - `@param img` — Input image (modified in-place).
+> - `@param labels` — Matrix of component labels.
+> - `@param thresh` — Minimum component size to be labeled.
+> - `@return` — Number of components meeting the size threshold.
 
 #### cvl_correlate
 
@@ -399,14 +421,14 @@ void cvl_correlate(Matrix *src, Matrix *dst, Matrix *kernel);
 Matrix cvl_correlate_new(Matrix *src, Matrix *kernel);
 ```
 
-Computes the correlation of a matrix with a kernel.
-
-Applies a sliding kernel over the input matrix without fipping it.  
-Zero-padding is used at boundaries.
-
-- `@param src` — Input matrix.
-- `@param dst` — Output matrix.
-- `@param kernel` — Correlation kernel.
+> Computes the correlation of a matrix with a kernel.
+>
+> Applies a sliding kernel over the input matrix without fipping it.  
+> Zero-padding is used at boundaries.
+>
+> - `@param src` — Input matrix.
+> - `@param dst` — Output matrix.
+> - `@param kernel` — Correlation kernel.
 
 #### cvl_convolve
 
@@ -416,14 +438,14 @@ void cvl_convolve(Matrix *src, Matrix *dst, Matrix *kernel);
 Matrix cvl_convolve_new(Matrix *src, Matrix *kernel);
 ```
 
-Computes the convolution of a matrix with a kernel.
-
-Applies a sliding kernel over the input matrix with kernel fipping.  
-Zero-padding is used at boundaries.
-
-- `@param src` — Input matrix.
-- `@param dst` — Output matrix.
-- `@param kernel` — Convolution kernel.
+> Computes the convolution of a matrix with a kernel.
+>
+> Applies a sliding kernel over the input matrix with kernel fipping.  
+> Zero-padding is used at boundaries.
+>
+> - `@param src` — Input matrix.
+> - `@param dst` — Output matrix.
+> - `@param kernel` — Convolution kernel.
 
 #### cvl_blur
 
@@ -433,13 +455,13 @@ void cvl_blur(Matrix *src, Matrix *dst, int ksize);
 Matrix cvl_blur_new(Matrix *src, int ksize);
 ```
 
-Applies a mean (box) filter to a matrix.
-
-Each output value is the average of a ksize x ksize neighborhood.
-
-- `@param src` — Input matrix.
-- `@param dst` — Output matrix.
-- `@param ksize` — Kernel size (must be positive).
+> Applies a mean (box) filter to a matrix.
+>
+> Each output value is the average of a ksize x ksize neighborhood.
+>
+> - `@param src` — Input matrix.
+> - `@param dst` — Output matrix.
+> - `@param ksize` — Kernel size (must be positive).
 
 #### cvl_median_blur
 
@@ -449,16 +471,16 @@ void cvl_median_blur(Matrix *src, Matrix *dst, int ksize);
 Matrix cvl_median_blur_new(Matrix *src, int ksize);
 ```
 
-Apply median blur using replicated outlier pixel values.
-
-Applies a median filter to a matrix.
-
-Each output value is the median of a ksize × ksize neighborhood.  
-Border values are handled using replication.
-
-- `@param src` — Input matrix.
-- `@param dst` — Output matrix.
-- `@param ksize` — Kernel size (must be odd).
+> Apply median blur using replicated outlier pixel values.
+>
+> Applies a median filter to a matrix.
+>
+> Each output value is the median of a ksize × ksize neighborhood.  
+> Border values are handled using replication.
+>
+> - `@param src` — Input matrix.
+> - `@param dst` — Output matrix.
+> - `@param ksize` — Kernel size (must be odd).
 
 #### cvl_sobel
 
@@ -466,13 +488,13 @@ Border values are handled using replication.
 void cvl_sobel(Matrix *src, Matrix *gx, Matrix *gy);
 ```
 
-Computes Sobel gradients of a matrix.
-
-Produces horizontal (`gx`) and vertical (`gy`) gradient components.
-
-- `@param src` — Input matrix.
-- `@param gx` — Output matrix for horizontal gradients.
-- `@param gy` — Output matrix for vertical gradients.
+> Computes Sobel gradients of a matrix.
+>
+> Produces horizontal (`gx`) and vertical (`gy`) gradient components.
+>
+> - `@param src` — Input matrix.
+> - `@param gx` — Output matrix for horizontal gradients.
+> - `@param gy` — Output matrix for vertical gradients.
 
 #### cvl_canny
 
@@ -496,11 +518,11 @@ The [Canny algorithm](https://web.archive.org/web/20220818083832/https://citesee
 
 **1 — Noise Reduction**
 
-Reduce image noise via cvl_blur().
+Reduce image noise via [`cvl_blur`](#cvl_blur).
 
 **2 — Gradient Computation**
 
-Estimate intensity gradients using the Sobel operator:
+Estimate intensity gradients using the Sobel operator — [`cvl_sobel`](#cvl_sobel):
 
 - Horizontal gradient: $G_x$
 - Vertical gradient: $G_y$
@@ -537,7 +559,7 @@ Hysteresis thresholding differentiates true edges from noise using a multi-pass 
 
 This process occurs in two stages:
 
-1. Classification — filters edge candidates into (edge, candidate, non-edge) according to the thresholds
+1\. _Classification_ — filters edge candidates into (edge, candidate, non-edge) according to the thresholds
 
 $$
 \text{candidate} = \begin{cases}
@@ -547,7 +569,7 @@ $$
 \end{cases}
 $$
 
-2. Edge Tracking — filters remaining candidates according to their connectiveity to edges
+2\. _Edge Tracking_ — filters remaining candidates according to their connectiveity to edges
 
 - Candidates connected to edges are promoted to edges
 - Remaining candidates are suppressed
