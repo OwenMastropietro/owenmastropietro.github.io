@@ -19,6 +19,58 @@ _Computer Vision Library in C._
 
 ## Examples
 
+### Hough Transform (Line Detection)
+
+```c
+#include <cvl/cvl.h>
+
+int main(void) {
+    Image img = cvl_imread("lanes.ppm");
+    Image binary = cvl_binarize_new(&img, 150);
+
+    Matrix mat = cvl_img2mat(binary);
+
+    // Canny Edges.
+    const int sigma = 1;
+    const int lo = 50;
+    const int hi = 120;
+    Matrix edges = cvl_canny_new(&mat, sigma, lo, hi);
+    Image edges_img = cvl_mat2img(edges, 0, 1);
+
+    // Hough Lines.
+    double drho = 1.0;
+    double dtheta = M_PI / 180.0;
+    int thresh = 70;
+    cvl_hough_lines_t lines = cvl_hough_lines_new(&edges, drho, dtheta, thresh);
+
+    Image lines_img = cvl_img_copy(&edges_img);
+    cvl_draw_hough_lines(&lines_img, &lines);
+
+    cvl_imwrite("./data/modified/original.ppm", &img);
+    cvl_imwrite("./data/modified/canny-edges.pgm", &edges_img);
+    cvl_imwrite("./data/modified/hough-lines.ppm", &lines_img);
+
+    // free memory...
+
+    return 0;
+}
+```
+
+<div class="gallery gallery--evolution">
+    <figure>
+        <img src="../../assets/code/cvl/lanes.png" alt="lena.png">
+        <figcaption>Original</figcaption>
+    </figure>
+    <figure>
+        <img src="../../assets/code/cvl/lanes-canny.png" alt="lena-binary.png">
+        <figcaption>Canny Edges</figcaption>
+    </figure>
+    <figure>
+        <img src="../../assets/code/cvl/lanes-hough.png" alt="lena-canny.png">
+        <figcaption>Hough Lines</figcaption>
+    </figure>
+</div>
+
 ### Performing Canny Edge Detection
 
 ```c
@@ -587,7 +639,66 @@ Point C is considered an edge as it is _between_ thresholds and _is_ connected t
 Point E is considered a non-edge as it is _between_ thresholds and _is not_ connected to an edge.  
 Point D is considered a non-edge as it is below the `low` threshold.
 
-#### cvl_sobel_mag
+#### cvl_hough
+
+```c
+int cvl_hough_lines(const Matrix *edges, cvl_hough_lines_t *dst, double drho, double dtheta, int thresh);
+
+cvl_hough_lines_t cvl_hough_lines_new(const Matrix *edges, double drho, double dtheta, int thresh);
+```
+
+Performs Hough line detection.
+
+Transforms edge pixels from image space into parameter space and identifies prominent lines via the [Hough Transform](todo).
+
+- `@param edges` — Input matrix - edge map (non-zero values indicate edge pixels, e.g., from [`cvl_canny`](#cvl_canny)).
+- `@param dst` — Output struct containing detected lines.
+- `@param drho` — Resolution of the distance parameter ρ.
+- `@param dtheta` — Resolution of the angle parameter θ (in radians).
+- `@param thresh` — Minimum number of votes required to recognize a line.
+
+Instead of representing lines in slope-intercept form ($y = mx + b$), which fails for vertical lines, the [Hough Transform](todo) maps each edge pixel $(x, y)$ into a sinusoidal curve in parameter space using the normal form:
+
+$$
+\rho = x \text{cos} \theta + y \text{sin} \theta
+$$
+
+- $\rho \in [-\rho_{\max}, \rho_{\max}]$ is the perpendicular distance from the origin to the line,
+- $\theta \in [0, \pi]$ is the angle of the normal vector, and
+- $\rho_{\max} = \sqrt{w^2 + h^2}$
+
+Each point in the $(\rho, \theta)$ space corresponds to a line in the image.
+
+Using accumulator matrix $A[\rho][\theta]$ to store the number of votes for a given line candiate, we can outline the algorithm as follows:
+
+**1 — Voting**
+
+```
+For each edge pixel (x, y):
+    For each θ:
+        Compute ρ
+        Accumulate votes in A[ρ][θ]
+```
+
+**2 — Peak Detection**
+
+After voting, lines are identified by finding local maxima in the accumulator.
+
+Bins with votes < `thresh` are discarded.
+
+The remaining bins are scanned to determine whether they are peaks or not.
+
+- A simple algorithm is to designate $A[\rho][\theta]$ as a peak if it is a local max in its 4-neighborhood.
+- Or we can use something like non-maximum suppression from [`cvl_canny`](#cvl_canny).
+
+Each peak corresponds to a detected line:
+
+- $\rho = r \cdot d\rho - \rho_{\max}$
+- $\theta = t \cdot d\theta$
+
+Detected lines are returned as $(\rho, \theta, \text{votes})$ sorted by vote count.
+
+<!-- #### cvl_sobel_mag
 
 ```c
 Matrix cvl_sobel_mag(Matrix *src);
@@ -597,6 +708,6 @@ Matrix cvl_sobel_mag(Matrix *src);
 
 ```c
 Matrix cvl_sobel_angle(Matrix *src);
-```
+``` -->
 
 ---
