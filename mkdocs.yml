@@ -1,5 +1,7 @@
 site_name: Owen Mastro
-# site_url: https://sitename.example
+site_url: https://owenmastropietro.com
+site_author: Owen Mastropietro
+site_description: Personal website and portfolio
 
 theme:
   name: material
