@@ -9,17 +9,22 @@ theme:
     - navigation.sections
     # - navigation.expand
   palette:
+    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/link
         name: switch to light mode
+
+    # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: custom
+      accent: custom
       toggle:
         icon: material/toggle-switch
         name: switch to dark mode
+
+    # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
       primary: black
@@ -27,6 +32,7 @@ theme:
       toggle:
         icon: material/toggle-switch-off
         name: switch to system preference
+
   font:
     text: Roboto
     code: Consolas
@@ -53,6 +59,11 @@ nav:
               - Build List: pages/home/vehicles/xterra/build-list.md
               - Gallery: pages/home/vehicles/xterra/gallery.md
       - Fitness: pages/home/fitness.md
+      - Recipes:
+        - recipes/index.md
+        - Pot Roast: recipes/pot-roast.md
+        - Bean Bake: recipes/bean-bake.md
+        - Chicken Alfredo: recipes/chicken-alfredo.md
 
 markdown_extensions:
   - admonition
@@ -81,10 +92,16 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+plugins:
+  - search
+  - table-reader
+
 extra_javascript:
   - javascripts/katex.js
   - https://unpkg.com/katex@0/dist/katex.min.js
   - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  - javascripts/tablesort.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
 
 extra_css:
   - stylesheets/custom.css

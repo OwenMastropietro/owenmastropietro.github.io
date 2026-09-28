@@ -1,3 +1,117 @@
+/* =========================
+   Light Mode
+   ========================= */
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #4F5B2A;
+  --md-primary-fg-color--light: #68773A;
+  --md-primary-fg-color--dark: #3C451F;
+
+  --md-accent-fg-color: #B8892D;
+  --md-accent-fg-color--transparent: #B8892D1A;
+
+  --md-default-bg-color: #F5EFE3;
+  --md-default-bg-color--light: #F5EFE3;
+  --md-default-bg-color--lighter: #FAF7F0;
+  --md-default-bg-color--lightest: #FFFFFF;
+
+  --md-default-fg-color: #292820;
+  --md-default-fg-color--light: #5F5B50;
+}
+
+.recipe-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+/* Recipe index */
+
+.recipe-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.recipe-card {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.recipe-card:hover {
+  border-color: var(--md-accent-fg-color);
+  box-shadow: var(--md-shadow-z2);
+  transform: translateY(-2px);
+}
+
+.recipe-card img {
+  width: 150px;
+  min-width: 150px;
+  height: 150px;
+  object-fit: cover;
+  margin: 1rem;
+  border-radius: 0.35rem;
+  /* justify-content: center; */
+}
+
+.recipe-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 1.25rem;
+}
+
+.recipe-card-content h3 {
+  margin: 0 0 0.4rem;
+  color: var(--md-primary-fg-color);
+}
+
+.recipe-card-content p {
+  margin: 0 0 0.75rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.recipe-card-meta {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+  .recipe-card img {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+  }
+
+  .recipe-card-content {
+    padding: 0.75rem 1rem;
+  }
+
+  .recipe-card-content h3 {
+    font-size: 1rem;
+  }
+
+  .recipe-card-content p {
+    font-size: 0.8rem;
+  }
+}
+
 .project-title {
     position: relative;
 }
